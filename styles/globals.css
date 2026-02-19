@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-image: linear-gradient(rgba(255, 92, 92, 0.637) 10%, white);
+    text-align: center;
+}
+
+.hearts span {
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    left: calc((100%/12)*sibling-index());
+    top: 0%;
+    font-size: 3em;
+    animation: heart calc(0.5s + 2s * sibling-index()) infinite linear forwards;
+}
+
+@keyframes heart {
+    0% {
+        top: calc(-10% * sibling-index());
+        rotate: 10deg;
+    }
+
+    20% {
+        top: calc(20% * sibling-index());
+        rotate: 20deg;
+    }
+
+    40% {
+        top: calc(40% * sibling-index());
+        rotate: 30deg;
+    }
+
+    60% {
+        top: calc(60% * sibling-index());
+        rotate: 20deg;
+    }
+
+    80% {
+        top: calc(80% * sibling-index());
+        rotate: 10deg;
+    }
+
+    90% {
+        top: calc(90% * sibling-index());
+        rotate: 30deg;
+    }
+
+    100% {
+        top: calc(110% * sibling-index());
+        rotate: 20deg;
+    }
+}
