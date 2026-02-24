@@ -1,5 +1,5 @@
 function Home() {
-    return <>
+    return <main>
         <h1><q>Obrigado por ser uma mãe incrível, você é muito especial❤️!</q><br></br>- de Pedro Makoski para Tatiana M. Makoski</h1>
         <div className="hearts">
             <span>❤️</span>
@@ -15,7 +15,7 @@ function Home() {
             <span>❤️</span>
             <span>❤️</span>
         </div>
-    </>
+    </main>
 }
 
 export default Home;
